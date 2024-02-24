@@ -16,7 +16,8 @@ namespace Source2Py {
 	std::vector<EventListener> eventListeners;
 
 	bool EventService::Init() {
-		gameevents = static_cast<IGameEventManager2*>(CallVFunc<IToolGameEventAPI*, 91>(server)); // get interface from ISource2Server vtable (func signature incomplete)
+		//gameevents = static_cast<IGameEventManager2*>(CallVFunc<IToolGameEventAPI*, 91>(server)); // get interface from ISource2Server vtable (func signature incomplete)
+		gameevents = static_cast<IGameEventManager2*>(CallVFunc<IToolGameEventAPI*, 93>(server)); // TODO: remove hardcoded offset.
 		if (!gameevents) {
 			Log::Write("Failed to load IGameEventManager2!");
 			return false;
