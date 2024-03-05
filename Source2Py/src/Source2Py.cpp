@@ -35,6 +35,7 @@ namespace Source2Py {
 
 			PyPlugin plugin(line);
 			if (plugin) {
+				Log::Write("Loaded " + line + " from pyplugins.ini");
 				m_Plugins.push_back(plugin);
 				m_Plugins.back().Load();
 			}

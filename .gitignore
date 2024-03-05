@@ -3,3 +3,5 @@
 # Visual Studio ignores
 .vs/
 [Oo]ut/
+/docs/Samples/__pycache__/*.pyc
+/plugins/__pycache__/*.pyc

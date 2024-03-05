@@ -27,6 +27,7 @@ namespace Source2Py {
 		void ClientConnect(int playerSlot, const char* name, uint64_t xuid, const char* networkID);
 		//void ClientCommand(int playerSlot, const CCommand& _cmd); (todo: port CCommand)
 		void FireGameEvent(IGameEvent* event);
+		void PlayerHurt(IGameEvent* event);
 
 		bool IsValid() const { return m_Valid; }
 
